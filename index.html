@@ -2,7 +2,7 @@
 
 <html lang="ko">
   <head>
-    <title>NEW-5 주소 찾기</title>
+    <title>NEW-6 주소 찾기</title>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -51,7 +51,8 @@
               zonecode: data.zonecode,
             };
 
-            webkit.messageHandlers.callBackHandler.callBack(postData);
+            // Web -> iOS
+            window.webkit.messageHandlers.callbackHandler.postMessage(postData);
           },
           width: "100%",
           height: "100%",
